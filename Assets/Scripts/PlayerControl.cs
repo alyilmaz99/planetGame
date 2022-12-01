@@ -16,7 +16,11 @@ public class PlayerControl : MonoBehaviour
 
 
     [SerializeField] private GameObject parentObject;
-    
+
+
+
+
+
     void Start()
     {
         timerfixer = timer;

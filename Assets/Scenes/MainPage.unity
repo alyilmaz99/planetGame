@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a290fe3eb3bc26b4482dc55c3c0d120a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 60
+  rotationSpeed: 80
 --- !u!58 &220769244
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a290fe3eb3bc26b4482dc55c3c0d120a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 60
+  rotationSpeed: 80
 --- !u!58 &272885026
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a290fe3eb3bc26b4482dc55c3c0d120a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 60
+  rotationSpeed: 80
 --- !u!58 &367284148
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -522,7 +522,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -565,7 +565,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8227c44a902d68e4da10670632b45b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCharacter: {fileID: 904098967}
+  mainCharacter: {fileID: 973536274}
+  focusingObject: {fileID: 973536274}
+  camSpeed: 1
+  cameraHeight: 10
+  playerControl: {fileID: 904098970}
 --- !u!1 &904098967
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,7 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a290fe3eb3bc26b4482dc55c3c0d120a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 60
+  rotationSpeed: 80
 --- !u!58 &973536276
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -855,7 +859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a290fe3eb3bc26b4482dc55c3c0d120a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 60
+  rotationSpeed: 80
 --- !u!58 &1499757521
 CircleCollider2D:
   m_ObjectHideFlags: 0
