@@ -6,7 +6,6 @@ public class planetkod : MonoBehaviour
 {
     public float scoreR;
     public float scoreL;
-    public GameObject[] planet;
     void Start()
     {
         
@@ -15,7 +14,6 @@ public class planetkod : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
     public void getscorer(){
 
