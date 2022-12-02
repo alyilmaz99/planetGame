@@ -19,10 +19,10 @@ public class planetcreator : MonoBehaviour
     {
         
     }
-    public void planetcreate(){
+    public void planetcreate(int position){
         int planetno = Random.Range(1, 11);
         int x = Random.Range(limitLEFT, limitLEFT);
         int y = Random.Range(limitUP, limitDOWN);
-        Instantiate(planet[0], new Vector2(x, y), Quaternion.identity);
+        Instantiate(planet[0], new Vector2(x, position + y), Quaternion.identity);
     }
 }
