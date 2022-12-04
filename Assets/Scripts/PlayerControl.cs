@@ -17,10 +17,13 @@ public class PlayerControl : MonoBehaviour
 
     public bool endCheck = false;
 
-    
-
     [SerializeField] private GameObject parentObject;
     [SerializeField] private GameObject childObject;
+
+    [Header("Sound Settings")]
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip experimentSong;
 
 
 
@@ -29,6 +32,7 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         timerfixer = timer;
+        audioSource = GetComponent<AudioSource>();
     }
 
     
@@ -58,6 +62,7 @@ public class PlayerControl : MonoBehaviour
 
 
             Vibration();
+            Sound();
 
         }
     }
@@ -114,6 +119,11 @@ public class PlayerControl : MonoBehaviour
         if (PlayerPrefs.GetInt("vibrationPref") == 1)
         {
             Handheld.Vibrate();
+            Debug.Log("titriyoruz");
+        }
+        else if (PlayerPrefs.GetInt("vibrationPref") == 0)
+        {
+            Debug.Log("titremiyoruz");
         }
 
     }
@@ -122,6 +132,13 @@ public class PlayerControl : MonoBehaviour
         if (PlayerPrefs.GetInt("soundPref") == 1)
         {
             // music code
+            audioSource.PlayOneShot(experimentSong);
+            Debug.Log("muzik dinliyoruz");
+        }
+        else if (PlayerPrefs.GetInt("soundPref") == 0)
+        {
+            // music code
+            Debug.Log("muzik dinlemiyoruz");
         }
     }
 

@@ -11,7 +11,6 @@ public class LeaderBoard : MonoBehaviour
     [SerializeField] private TextMeshProUGUI rank2Text;
     [SerializeField] private TextMeshProUGUI rank3Text;
     [SerializeField] private TextMeshProUGUI rank4Text;
-    [SerializeField] private TextMeshProUGUI rank5Text;
 
     
     public List<TextMeshProUGUI> rankingTexts = new List<TextMeshProUGUI>();
@@ -24,7 +23,7 @@ public class LeaderBoard : MonoBehaviour
         rankingTexts.Add(rank2Text);
         rankingTexts.Add(rank3Text);
         rankingTexts.Add(rank4Text);
-        rankingTexts.Add(rank5Text);
+        
     }
 
     // Update is called once per frame
