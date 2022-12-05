@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class getscore : MonoBehaviour
+public class background : MonoBehaviour
 {
+    public GameObject cam;
     void Start()
     {
         
@@ -12,6 +13,6 @@ public class getscore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = Vector3.MoveTowards(transform.position, cam.transform.position, 3);
     }
 }
