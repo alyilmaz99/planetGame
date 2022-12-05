@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -14,10 +15,19 @@ public class PlayerControl : MonoBehaviour
     private float timerfixer;
     [SerializeField] private bool timerBool = true;
 
+    public bool endCheck = false;
 
     [SerializeField] private GameObject parentObject;
     public int scoreadder;
     float speed;
+
+    [SerializeField] private GameObject childObject;
+
+    [Header("Sound Settings")]
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip experimentSong;
+
 
 
 
@@ -27,6 +37,7 @@ public class PlayerControl : MonoBehaviour
     {
         PlayerPrefs.SetInt("score",0);
         timerfixer = timer;
+        audioSource = GetComponent<AudioSource>();
     }
 
     
@@ -35,17 +46,29 @@ public class PlayerControl : MonoBehaviour
         Movement();
         EndGame();
 
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Planet")
         {
+            
             flyCheck = false;
             timerBool = true;
             timer = timerfixer;
             Debug.Log("Planet enter");
+
             transform.parent = other.gameObject.transform;
-            transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+
+            
+            
+            transform.rotation = Quaternion.Euler(0,0,180f);
+            //transform.rotation = childObject.transform.rotation;
+
+
+            Vibration();
+            Sound();
+
         }
     }
 
@@ -94,9 +117,37 @@ public class PlayerControl : MonoBehaviour
 
         if (timer < 0)
         {
-            Debug.Log("Game ended");
+            endCheck = true;
+            
         }
     }
 
+    void Vibration()
+    {
+        if (PlayerPrefs.GetInt("vibrationPref") == 1)
+        {
+            Handheld.Vibrate();
+            Debug.Log("titriyoruz");
+        }
+        else if (PlayerPrefs.GetInt("vibrationPref") == 0)
+        {
+            Debug.Log("titremiyoruz");
+        }
+
+    }
+    void Sound()
+    {
+        if (PlayerPrefs.GetInt("soundPref") == 1)
+        {
+            // music code
+            audioSource.PlayOneShot(experimentSong);
+            Debug.Log("muzik dinliyoruz");
+        }
+        else if (PlayerPrefs.GetInt("soundPref") == 0)
+        {
+            // music code
+            Debug.Log("muzik dinlemiyoruz");
+        }
+    }
 
 }
