@@ -813,6 +813,8 @@ MonoBehaviour:
   vibButton: {fileID: 6374599254383205056}
   noVib: {fileID: 21300000, guid: 0e4b8980f9a21084e9430f70f28de7cd, type: 3}
   withVib: {fileID: 21300000, guid: 76b4017952385ef48b674cb6ace7be62, type: 3}
+  sound: 0
+  vib: 0
 --- !u!114 &429930934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,6 +1043,7 @@ GameObject:
   - component: {fileID: 603994412}
   - component: {fileID: 603994414}
   - component: {fileID: 603994413}
+  - component: {fileID: 603994415}
   m_Layer: 5
   m_Name: Leaderboard Screen
   m_TagString: Untagged
@@ -1117,6 +1120,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603994411}
   m_CullTransparentMesh: 1
+--- !u!114 &603994415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603994411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7504ceb2cdb5b4ca53cebc5246924c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rank1Text: {fileID: 1779623626}
+  rank2Text: {fileID: 350273148}
+  rank3Text: {fileID: 4176087}
+  rank4Text: {fileID: 32106177}
+  rankingTexts: []
 --- !u!1 &793693645
 GameObject:
   m_ObjectHideFlags: 0
