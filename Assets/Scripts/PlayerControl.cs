@@ -16,6 +16,8 @@ public class PlayerControl : MonoBehaviour
 
 
     [SerializeField] private GameObject parentObject;
+    public int scoreadder;
+    float speed;
 
 
 
@@ -23,6 +25,7 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetInt("score",0);
         timerfixer = timer;
     }
 
@@ -60,9 +63,9 @@ public class PlayerControl : MonoBehaviour
         {
             Debug.Log("Planeeeeet exiiitt");
 
-            Destroy(other.gameObject, 4f);
-            timerBool = false;
-        }
+           Destroy(other.gameObject, 4f);
+           timerBool = false;
+       }
     }
 
     void Movement()
@@ -74,7 +77,10 @@ public class PlayerControl : MonoBehaviour
         }
         if (flyCheck)
         {
-            transform.Translate(rotationVector2 * forcePower * Time.deltaTime);
+            if(speed < 2){
+            speed = 1 +(PlayerPrefs.GetInt("score")/500);
+            }
+            transform.Translate(rotationVector2 * forcePower * speed * Time.deltaTime);
         }
     }
 

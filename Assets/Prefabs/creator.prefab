@@ -56,7 +56,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   limitRIGHT: 0
   limitLEFT: 0
   limitUP: 0
   limitDOWN: 0
+  scoretext: {fileID: 0}
