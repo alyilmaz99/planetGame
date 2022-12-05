@@ -54,5 +54,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+    public void RetryLevel()
+    {
+        SceneManager.LoadScene("GameScene 1"); 
+    }
 
 }
