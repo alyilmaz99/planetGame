@@ -107,7 +107,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    void EndGame()
+    public void EndGame()
     {
         if (!timerBool)
         {
