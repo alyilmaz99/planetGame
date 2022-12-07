@@ -98,6 +98,14 @@ public class PlayerControl : MonoBehaviour
             transform.parent = null;
             flyCheck = true;
         }
+        for (int i = 0; i < Input.touchCount; ++i)
+        {
+            if (Input.GetTouch(i).phase == TouchPhase.Began)
+            {
+                transform.parent = null;
+                flyCheck = true;
+            }
+        }
         if (flyCheck)
         {
             if(speed < 2){
@@ -105,6 +113,7 @@ public class PlayerControl : MonoBehaviour
             }
             transform.Translate(rotationVector2 * forcePower * speed * Time.deltaTime);
         }
+        
     }
 
     public void EndGame()
