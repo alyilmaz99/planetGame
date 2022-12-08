@@ -28,8 +28,10 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip experimentSong;
 
-
-
+    [Header("Reborn Settings")]
+    [SerializeField] private GameObject rebornObject;
+    [SerializeField] private Vector3 rebornTransform;
+    [SerializeField] private Transform rebornRotation;
 
 
 
@@ -45,7 +47,6 @@ public class PlayerControl : MonoBehaviour
     {
         Movement();
         EndGame();
-
 
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -64,6 +65,13 @@ public class PlayerControl : MonoBehaviour
             
             transform.rotation = Quaternion.Euler(0,0,180f);
             //transform.rotation = childObject.transform.rotation;
+
+            //rebornSettings
+
+            rebornTransform = (transform.position);
+            rebornObject = other.gameObject;
+
+
 
 
             Vibration();
@@ -86,7 +94,7 @@ public class PlayerControl : MonoBehaviour
         {
             Debug.Log("Planeeeeet exiiitt");
 
-           Destroy(other.gameObject, 4f);
+           Destroy(other.gameObject, 60f);
            timerBool = false;
        }
     }
@@ -98,6 +106,14 @@ public class PlayerControl : MonoBehaviour
             transform.parent = null;
             flyCheck = true;
         }
+        for (int i = 0; i < Input.touchCount; ++i)
+        {
+            if (Input.GetTouch(i).phase == TouchPhase.Began)
+            {
+                transform.parent = null;
+                flyCheck = true;
+            }
+        }
         if (flyCheck)
         {
             if(speed < 2){
@@ -105,6 +121,7 @@ public class PlayerControl : MonoBehaviour
             }
             transform.Translate(rotationVector2 * forcePower * speed * Time.deltaTime);
         }
+        
     }
 
     public void EndGame()
@@ -148,6 +165,12 @@ public class PlayerControl : MonoBehaviour
             // music code
             Debug.Log("muzik dinlemiyoruz");
         }
+    }
+    public void Reborn()
+    {
+        transform.position = rebornTransform;
+        transform.parent = rebornObject.transform;
+        timer = timerfixer;
     }
 
 }

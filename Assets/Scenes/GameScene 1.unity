@@ -1126,6 +1126,9 @@ MonoBehaviour:
   childObject: {fileID: 0}
   audioSource: {fileID: 0}
   experimentSong: {fileID: 0}
+  rebornObject: {fileID: 0}
+  rebornTransform: {x: 0, y: 0, z: 0}
+  rebornRotation: {fileID: 0}
 --- !u!212 &904098971
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1627,12 +1630,16 @@ PrefabInstance:
       value: 34.28
       objectReference: {fileID: 0}
     - target: {fileID: 8475665175910924843, guid: d5aff35b79f669d4ab77a63e29789371, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475665175910924843, guid: d5aff35b79f669d4ab77a63e29789371, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1775931652}
     - target: {fileID: 8475665175910924843, guid: d5aff35b79f669d4ab77a63e29789371, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ContinueGame
+      value: RebornandContinueTheGame
       objectReference: {fileID: 0}
     - target: {fileID: 8475665175910924843, guid: d5aff35b79f669d4ab77a63e29789371, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2016,6 +2023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1775931653}
   - component: {fileID: 1775931652}
+  - component: {fileID: 1775931654}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: manager
@@ -2036,6 +2044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerControl: {fileID: 904098970}
+  adManager: {fileID: 1775931654}
   endScreen: {fileID: 443458496}
   pauseScreen: {fileID: 787215338}
 --- !u!4 &1775931653
@@ -2053,6 +2062,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1775931654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775931651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cfb0c25e03fe60419de6edfdf80395e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerControl: {fileID: 904098970}
+  gameManager: {fileID: 1775931652}
+  adCheck: 0
 --- !u!1 &1798970653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2220,7 +2244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9482face84594d4497a4182e93bc7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroytime: 1000
+  destroytime: 20
 --- !u!50 &1827782855
 Rigidbody2D:
   serializedVersion: 4
