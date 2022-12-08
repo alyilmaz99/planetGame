@@ -48,7 +48,7 @@ public class planetcreator : MonoBehaviour
         Instantiate(fireball[0], new Vector2(player.transform.position.x - 14, player.transform.position.y + firey), Quaternion.identity);
         else
         Instantiate(fireball[1], new Vector2(player.transform.position.x + 14, player.transform.position.y + firey), Quaternion.identity);
-        firetimer = Time.time + firetime;
+        firetimer = Time.time + firetime - (PlayerPrefs.GetFloat("score")/250);
     }
     public void holecreate(){
         int x = Random.Range(limitLEFT, limitRIGHT);
