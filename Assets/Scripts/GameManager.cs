@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private PlayerControl playerControl;
+    [SerializeField] private ADManager adManager;
 
     [SerializeField] private GameObject endScreen;
 
@@ -31,6 +32,10 @@ public class GameManager : MonoBehaviour
         if (playerControl.endCheck)
         {
             endScreen.SetActive(true);
+        }
+        else if (!playerControl.endCheck)
+        {
+            endScreen.SetActive(false);
         }
     }
 
@@ -57,6 +62,12 @@ public class GameManager : MonoBehaviour
     public void RetryLevel()
     {
         SceneManager.LoadScene("GameScene 1"); 
+    }
+
+    public void RebornandContinueTheGame()
+    {
+        endScreen.SetActive(false);
+        adManager.WatchRebornAd();
     }
 
 }
