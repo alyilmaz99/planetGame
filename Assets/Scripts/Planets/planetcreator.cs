@@ -18,6 +18,8 @@ public class planetcreator : MonoBehaviour
     public GameObject[] fireball;
     float firetimer;
     public float firetime;
+    float firey;
+    int fired;
     void Start()
     {
         PlayerPrefs.SetInt("score",0);
@@ -38,16 +40,15 @@ public class planetcreator : MonoBehaviour
         int x = Random.Range(limitLEFT, limitRIGHT);
         float y = Random.Range(limitUP, limitDOWN);
         Instantiate(planet[planetno], new Vector2(position.x + x, position.y + y), Quaternion.identity);
-        holecreate();
+        firey = Random.Range(fireDOWN, fireUP);
+        fired = Random.Range(0,2);
     }
     public void firecreate(){
-        float y = Random.Range(fireDOWN, fireUP);
-        int fired = Random.Range(0,2);
-        firetimer = Time.time + firetime - (PlayerPrefs.GetInt("score")/100);
         if(fired == 0)
-        Instantiate(fireball[0], new Vector2(player.transform.position.x - 14, player.transform.position.y + y), Quaternion.identity);
+        Instantiate(fireball[0], new Vector2(player.transform.position.x - 14, player.transform.position.y + firey), Quaternion.identity);
         else
-        Instantiate(fireball[1], new Vector2(player.transform.position.x + 14, player.transform.position.y + y), Quaternion.identity);
+        Instantiate(fireball[1], new Vector2(player.transform.position.x + 14, player.transform.position.y + firey), Quaternion.identity);
+        firetimer = Time.time + firetime - (PlayerPrefs.GetFloat("score")/250);
     }
     public void holecreate(){
         int x = Random.Range(limitLEFT, limitRIGHT);
