@@ -33,13 +33,21 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private Vector3 rebornTransform;
     [SerializeField] private Transform rebornRotation;
 
+    [Header("Sprite Settings")]
+    [SerializeField] private List<Sprite> SpriteList = new List<Sprite>();
+    [SerializeField] private int spriteCheck;
 
 
     void Start()
     {
+        spriteCheck= PlayerPrefs.GetInt("Character");
+        gameObject.GetComponent<SpriteRenderer>().sprite = SpriteList[spriteCheck - 1];
+
         PlayerPrefs.SetInt("score",0);
         timerfixer = timer;
         audioSource = GetComponent<AudioSource>();
+
+        Time.timeScale = 1;
     }
 
     
