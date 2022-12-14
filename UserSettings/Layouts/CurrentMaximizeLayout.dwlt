@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 290.4
     height: 432.8
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -224,9 +224,11 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+
       m_SelectedIDs: 6240ffff
       m_LastClickedID: -49054
       m_ExpandedIDs: 7841ffff7254ffff6a81ffff7c81ffff8e81ffffa881ffffc881ffffda81ffff0c82ffff3a82ffff7282ffff7482ffff4884ffff1a86ffffb486ffffb898ffff089affff82faffff94faffffa6faffffc0faffffeefaffff26fbffff28fbffff0c600000b8600000ce600000e26000001a6100009ab40000b6b4000034b50000f0b500000cb600003ab6000044b6000068b600008ab6000066c3000076c3000038cc000054cc000082cc00008ccc0000b0cc0000d2cc0000
+
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -560,6 +562,7 @@ MonoBehaviour:
     m_Target: {x: 98.57359, y: 171.0441, z: -1.1669481}
     speed: 2
     m_Value: {x: 98.57359, y: 171.0441, z: -1.1669481}
+
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -693,7 +696,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: rota
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -706,12 +709,14 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
     - Assets/Scenes
+
     m_Globs: []
-    m_OriginalText: 
+    m_OriginalText: rota
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets/Scenes
+
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\unityprojects\planetGame
   m_LockTracker:
@@ -749,6 +754,7 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 00000000d463000000ca9a3b
+
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -776,6 +782,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 6240ffff
     m_LastClickedInstanceID: -49054
     m_HadKeyboardFocusLastEvent: 0
+
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
