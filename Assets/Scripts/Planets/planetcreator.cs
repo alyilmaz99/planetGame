@@ -22,6 +22,8 @@ public class planetcreator : MonoBehaviour
     int fired;
     float holey;
     int holex;
+    float y;
+    Vector3 ps;
     void Start()
     {
         PlayerPrefs.SetInt("score",0);
@@ -39,11 +41,12 @@ public class planetcreator : MonoBehaviour
         }
     }
     public void planetcreate(Vector3 position){
+        ps = position;
         int planetno = Random.Range(1, 11);
         int x = Random.Range(limitLEFT, limitRIGHT);
-        float y = Random.Range(limitUP, limitDOWN);
+        y = Random.Range(limitUP, limitDOWN);
         Instantiate(planet[planetno], new Vector2(position.x + x, position.y + y), Quaternion.identity);
-        firey = Random.Range(10, 20);
+        firey = Random.Range(5, 12);
         fired = Random.Range(0,2);
         holey = Random.Range(fireDOWN + 10, y - 5);
         holex = Random.Range(1,3);
@@ -56,9 +59,9 @@ public class planetcreator : MonoBehaviour
     }
     public void firecreate(){
         if(fired == 0)
-        Instantiate(fireball[0], new Vector2(player.transform.position.x - 14, player.transform.position.y + firey), Quaternion.identity);
+        Instantiate(fireball[0], new Vector2(player.transform.position.x - 14, ps.y + firey), Quaternion.identity);
         else
-        Instantiate(fireball[1], new Vector2(player.transform.position.x + 14, player.transform.position.y + firey), Quaternion.identity);
+        Instantiate(fireball[1], new Vector2(player.transform.position.x + 14, ps.y + firey), Quaternion.identity);
         firetimer = Time.time + firetime - (PlayerPrefs.GetFloat("score")/250);
     }
     public void holecreate(){

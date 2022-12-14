@@ -33,11 +33,11 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 220, y: 390.8}
+  m_TargetSize: {x: 1080, y: 1920}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -68,16 +68,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 0000000000000000000000000d000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 00000000000000000000000014000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -88
-    m_HBaseRangeMax: 88
-    m_VBaseRangeMin: -156.31999
-    m_VBaseRangeMax: 156.31999
+    m_HBaseRangeMin: -432
+    m_HBaseRangeMax: 432
+    m_VBaseRangeMin: -768
+    m_VBaseRangeMax: 768
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -97,7 +97,7 @@ MonoBehaviour:
       y: 21
       width: 880.4
       height: 390.8
-    m_Scale: {x: 1.2201407, y: 1.2201407}
+    m_Scale: {x: 0.25442708, y: 0.25442708}
     m_Translation: {x: 440.2, y: 195.4}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -105,16 +105,16 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -360.77808
-      y: -160.14546
-      width: 721.55615
-      height: 320.29092
+      x: -1730.1619
+      y: -768
+      width: 3460.3237
+      height: 1536
     m_MinimalGUI: 1
-  m_defaultScale: 1
+  m_defaultScale: 0.25442708
   m_LastWindowPixelSize: {x: 1100.5, y: 514.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000001000000000000
+  m_LowResolutionForAspectRatios: 00000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
 --- !u!114 &3
@@ -223,10 +223,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 41.200012}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 0e1cffff741cffffdc1cffff401dffff921dfffff01dfffff21dffff0420ffffde23ffffe223fffff223fffff823ffff0224ffff0624ffff0824ffff0a24ffff1024ffff1424ffff7a25ffff3827ffff1629ffffbe2affffee2cffff942effffde30ffff4633fffff234ffffa436ffff7a39ffff7841ffff7254ffff6a81ffff7c81ffff8e81ffffa881ffffc881ffffda81ffff0c82ffff3a82ffff7282ffff7482ffff4884ffff1a86ffffb486ffffb898ffff089affff82faffff94faffffa6faffffc0faffffeefaffff26fbffff28fbffff0c600000b8600000ce600000e26000001a6100009ab40000b6b4000034b50000f0b500000cb600003ab6000044b6000068b600008ab6000066c3000076c3000038cc000054cc000082cc00008ccc0000b0cc0000d2cc000054f30000
+      m_ExpandedIDs: 18c7feff2ac7feff3cc7feff56c7feffbcc7feffbec7feffecc7feff24c8feff4cc8feff82c8feff98c8feffa6c8feffb4c8feffcec8feffe8c8fefff6c8feff26c9feff28c9feff10d9feffa0d9fefff60afffff80affffbc0bffff0e0cffff6c0cffff6e0cffff2810ffff0e1cffff741cffff761cffffdc1cffff401dffff921dfffff01dfffff21dffff0420ffffde23ffffe223fffff223fffff823ffff0224ffff0624ffff0824ffff0a24ffff1024ffff1424ffff7a25ffff3827ffff1629ffffbe2affffee2cffff942effffde30ffff4633fffff234ffffa436ffff7a39ffff7841ffff7254ffff6a81ffff7c81ffff8e81ffffa881ffffc881ffffda81ffff0c82ffff3a82ffff7282ffff7482ffff4884ffff1a86ffffb486ffffb898ffff089affff82faffff94faffffa6faffffc0faffffeefaffff26fbffff28fbffff0c600000b8600000ce600000e26000001a6100009ab40000b6b4000034b50000f0b500000cb600003ab6000044b6000068b600008ab6000066c3000076c3000038cc000054cc000082cc00008ccc0000b0cc0000d2cc0000eef2000054f30000baf3000038170100441701006817010000a701001ca701004aa7010054a7010078a701009aa70100c0af01001eb001003ab00100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -269,7 +269,7 @@ MonoBehaviour:
     y: 0
     width: 882.4
     height: 432.8
-  m_MinSize: {x: 202, y: 221}
+  m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.1670735, y: 0.23228401, z: 0.070586175}
+    m_Target: {x: 119.81366, y: 85.74213, z: 0.34106255}
     speed: 2
-    m_Value: {x: -2.1670735, y: 0.23228401, z: 0.070586175}
+    m_Value: {x: 119.81366, y: 85.74213, z: 0.34106255}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -610,9 +610,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 23.421154
+    m_Target: 41.21771
     speed: 2
-    m_Value: 23.421154
+    m_Value: 41.21771
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -705,21 +705,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\unityprojects\planetGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7e640000
-    m_LastClickedID: 25726
+    m_SelectedIDs: 78640000
+    m_LastClickedID: 25720
     m_ExpandedIDs: 00000000d463000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -851,8 +851,8 @@ MonoBehaviour:
     y: 0
     width: 363.19995
     height: 730.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
