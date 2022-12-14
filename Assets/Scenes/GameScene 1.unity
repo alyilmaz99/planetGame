@@ -3035,7 +3035,7 @@ PrefabInstance:
       objectReference: {fileID: 4480131689077274288, guid: 0b65b9652266df94faf71cbe14e79c63, type: 3}
     - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: firetime
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: blackhole
