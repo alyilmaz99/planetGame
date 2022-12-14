@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 290.4
     height: 432.8
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -226,7 +226,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 28fbffff
+      m_ExpandedIDs: 0e1cffff741cffffdc1cffff401dffff921dfffff01dfffff21dffff0420ffffde23ffffe223fffff223fffff823ffff0224ffff0624ffff0824ffff0a24ffff1024ffff1424ffff7a25ffff3827ffff1629ffffbe2affffee2cffff942effffde30ffff4633fffff234ffffa436ffff7a39ffff7841ffff7254ffff6a81ffff7c81ffff8e81ffffa881ffffc881ffffda81ffff0c82ffff3a82ffff7282ffff7482ffff4884ffff1a86ffffb486ffffb898ffff089affff82faffff94faffffa6faffffc0faffffeefaffff26fbffff28fbffff0c600000b8600000ce600000e26000001a6100009ab40000b6b4000034b50000f0b500000cb600003ab6000044b6000068b600008ab6000066c3000076c3000038cc000054cc000082cc00008ccc0000b0cc0000d2cc000054f30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -15.588726, y: 10.490066, z: -0.18523324}
+    m_Target: {x: -2.1670735, y: 0.23228401, z: 0.070586175}
     speed: 2
-    m_Value: {x: -15.588726, y: 10.490066, z: -0.18523324}
+    m_Value: {x: -2.1670735, y: 0.23228401, z: 0.070586175}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -610,9 +610,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 19.389341
+    m_Target: 23.421154
     speed: 2
-    m_Value: 19.389341
+    m_Value: 23.421154
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -693,7 +693,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: rota
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -705,22 +705,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Sprites
     m_Globs: []
-    m_OriginalText: rota
+    m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Sprites
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\unityprojects\planetGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 34630000
-    m_LastClickedID: 25396
-    m_ExpandedIDs: 000000002663000000ca9a3b
+    m_SelectedIDs: 7e640000
+    m_LastClickedID: 25726
+    m_ExpandedIDs: 00000000d463000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -748,7 +748,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000026630000
+    m_ExpandedIDs: 00000000d463000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
