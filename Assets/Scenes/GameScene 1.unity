@@ -1933,6 +1933,73 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1584038271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1584038273}
+  - component: {fileID: 1584038272}
+  m_Layer: 0
+  m_Name: language
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1584038272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584038271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ffaa703b16bf948a9f6061f1f2b366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Scenetexts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  translaters:
+  - Turkish: DEVAM ET
+    English: CONTINUE
+  - Turkish: "HAYIR, TE\u015EEKK\xDCRLER"
+    English: NO THANKS
+  - Turkish: "DAHA \u0130Y\u0130 YAPAB\u0130L\u0130RS\u0130N"
+    English: YOU CAN DO BETTER
+  - Turkish: AYARLAR
+    English: SETTINGS
+  - Turkish: ANA MENU
+    English: MAIN MENU
+  - Turkish: DEVAM ET
+    English: CONTINUE
+  - Turkish: DAHA FAZLA OYUNLAR
+    English: MORE GAMES
+--- !u!4 &1584038273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584038271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 103.85776, y: 131.13274, z: -1.0642947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1688862914
 GameObject:
   m_ObjectHideFlags: 0
