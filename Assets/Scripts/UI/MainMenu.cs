@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject settingsScreen;
     [SerializeField] private GameObject leaderBoardScreen;
+    [SerializeField] private GameObject marketScreen;
 
     [SerializeField] private bool soundPrefBool;
     [SerializeField] private bool vibrationPrefBool;
@@ -60,6 +61,17 @@ public class MainMenu : MonoBehaviour
     {
         mainMenu.SetActive(false);
         settingsScreen.SetActive(true);
+    }
+
+    public void OpenMarket()
+    {
+        mainMenu.SetActive(false);
+        marketScreen.SetActive(true);
+    }
+    public void BackButtonMarket()
+    {
+        mainMenu.SetActive(true);
+        marketScreen.SetActive(false);
     }
 
     public void BackButtonSettings()
