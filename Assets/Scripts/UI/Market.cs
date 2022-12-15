@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Purchasing;
 
 public class Market : MonoBehaviour
 {
@@ -52,4 +53,10 @@ public class Market : MonoBehaviour
     {
         PlayerPrefs.SetInt("Character", 9);
     }
+
+    public void InAppCharacter1()
+    {
+        Debug.Log("satin alindiiii");
+    }
+
 }
