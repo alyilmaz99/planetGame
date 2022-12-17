@@ -13,7 +13,6 @@ public class blackhole : MonoBehaviour
         scaleChange = new Vector3(0.01f * growspeed, 0.01f * growspeed, 0.01f * growspeed);
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.localScale += scaleChange*Time.deltaTime;
