@@ -51,17 +51,18 @@ public class planetcreator : MonoBehaviour
         holey = Random.Range(fireDOWN + 10, y - 5);
         holex = Random.Range(1,3);
         if(holex == 1){
-            Instantiate(blackhole,  new Vector2(position.x + x + 10, position.y + y + holey), Quaternion.identity);
+            Instantiate(blackhole,  new Vector2(position.x + x + 13, position.y + y + holey), Quaternion.identity);
         }
         else{
-            Instantiate(blackhole,  new Vector2(position.x + x - 10, position.y + y + holey), Quaternion.identity);
+            Instantiate(blackhole,  new Vector2(position.x + x - 13, position.y + y + holey), Quaternion.identity);
         }
+        firetimer = Time.time + 1f;
     }
     public void firecreate(){
         if(fired == 0)
-        Instantiate(fireball[0], new Vector2(player.transform.position.x - 14, ps.y + firey), Quaternion.identity);
+        Instantiate(fireball[0], new Vector2(player.transform.position.x - 14, ps.y + firey + 3), Quaternion.identity);
         else
-        Instantiate(fireball[1], new Vector2(player.transform.position.x + 14, ps.y + firey), Quaternion.identity);
+        Instantiate(fireball[1], new Vector2(player.transform.position.x + 14, ps.y + firey + 3), Quaternion.identity);
         firetimer = Time.time + firetime - (PlayerPrefs.GetFloat("score")/250);
     }
     public void holecreate(){
