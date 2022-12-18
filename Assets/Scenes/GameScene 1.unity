@@ -1396,8 +1396,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0124925375, y: 0.031231165}
-  m_Size: {x: 2.245971, y: 4.407925}
+  m_Offset: {x: 0.0124925375, y: -0.095911026}
+  m_Size: {x: 2.245971, y: 4.6622095}
   m_Direction: 0
 --- !u!1 &973536274
 GameObject:
@@ -1413,7 +1413,7 @@ GameObject:
   - component: {fileID: 973536275}
   m_Layer: 0
   m_Name: planet7
-  m_TagString: Planet
+  m_TagString: First Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
