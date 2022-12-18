@@ -98,6 +98,7 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        
         if (other.gameObject.tag == "Planet")
         {
             Debug.Log("Planeeeeet exiiitt");
@@ -111,6 +112,8 @@ public class PlayerControl : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Sound();
+            Vibration();
             transform.parent = null;
             flyCheck = true;
         }
@@ -149,6 +152,7 @@ public class PlayerControl : MonoBehaviour
 
     void Vibration()
     {
+        Handheld.Vibrate();
         if (PlayerPrefs.GetInt("vibrationPref") == 1)
         {
             Handheld.Vibrate();
@@ -162,17 +166,7 @@ public class PlayerControl : MonoBehaviour
     }
     void Sound()
     {
-        if (PlayerPrefs.GetInt("soundPref") == 1)
-        {
-            // music code
-            audioSource.PlayOneShot(experimentSong);
-            Debug.Log("muzik dinliyoruz");
-        }
-        else if (PlayerPrefs.GetInt("soundPref") == 0)
-        {
-            // music code
-            Debug.Log("muzik dinlemiyoruz");
-        }
+        audioSource.PlayOneShot(experimentSong);
     }
     public void Reborn()
     {
