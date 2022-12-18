@@ -8,7 +8,7 @@ public class RotatePlanets : MonoBehaviour
 
     [SerializeField] private float rotationSpeed;
     private Vector3 rotationVector = new Vector3(0, 0, 1);
-    int speed;
+    float speed;
     int direction;
 
     void Start()
@@ -19,7 +19,7 @@ public class RotatePlanets : MonoBehaviour
     }
     void Update()
     {
-        if(speed < 2){
+        if(speed < 1.5){
             speed = 1 +(PlayerPrefs.GetInt("score")/500);
         }
         speed = 1 +(PlayerPrefs.GetInt("score")/500);

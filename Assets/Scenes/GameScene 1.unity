@@ -1251,6 +1251,7 @@ GameObject:
   - component: {fileID: 904098970}
   - component: {fileID: 904098969}
   - component: {fileID: 904098972}
+  - component: {fileID: 904098973}
   m_Layer: 0
   m_Name: astronot
   m_TagString: Player
@@ -1266,8 +1267,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904098967}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0051939487, y: 4.767812, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.0039953454, y: 3.7944705, z: 0}
+  m_LocalScale: {x: 0.5769231, y: 0.5769231, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 973536278}
@@ -1315,8 +1316,8 @@ MonoBehaviour:
   parentObject: {fileID: 0}
   scoreadder: 20
   childObject: {fileID: 0}
-  audioSource: {fileID: 0}
-  experimentSong: {fileID: 0}
+  audioSource: {fileID: 904098973}
+  experimentSong: {fileID: 8300000, guid: 1903d4920771d1d478deb42fed573c6f, type: 3}
   rebornObject: {fileID: 0}
   rebornTransform: {x: 0, y: 0, z: 0}
   rebornRotation: {fileID: 0}
@@ -1399,6 +1400,102 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0124925375, y: 0.031231165}
   m_Size: {x: 2.245971, y: 4.407925}
   m_Direction: 0
+--- !u!82 &904098973
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904098967}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &973536274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1605,7 @@ Transform:
   m_GameObject: {fileID: 973536274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.0051939487, y: -4.767812, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 904098968}
@@ -8875,6 +8972,14 @@ PrefabInstance:
     - target: {fileID: 9188314395547769592, guid: b0594dbb328c80c41bc71a19d612b44e, type: 3}
       propertyPath: m_SizeDelta.y
       value: 5.1617
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188314395547769592, guid: b0594dbb328c80c41bc71a19d612b44e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188314395547769592, guid: b0594dbb328c80c41bc71a19d612b44e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 9188314395547769592, guid: b0594dbb328c80c41bc71a19d612b44e, type: 3}
       propertyPath: m_LocalPosition.x
