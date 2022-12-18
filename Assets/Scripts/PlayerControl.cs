@@ -101,11 +101,19 @@ public class PlayerControl : MonoBehaviour
         
         if (other.gameObject.tag == "Planet")
         {
-            Debug.Log("Planeeeeet exiiitt");
+            Debug.Log("Planet exit");
 
            Destroy(other.gameObject, 60f);
            timerBool = false;
        }
+
+        if (other.gameObject.tag == "First Planet")
+        {
+            Debug.Log("First Planet exit");
+
+            Destroy(other.gameObject, 60f);
+            timerBool = false;
+        }
     }
 
     void Movement()
