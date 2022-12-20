@@ -2860,6 +2860,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 211271138337027819, guid: b6b993206958d0e4a9be8e3e7f5abe7e, type: 3}
     - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
+      propertyPath: firetimed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
+      propertyPath: firetimeu
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: limitDOWN
       value: 15
       objectReference: {fileID: 0}
