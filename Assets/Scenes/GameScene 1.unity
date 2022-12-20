@@ -1267,9 +1267,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904098967}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0039953454, y: 3.7944705, z: 0}
-  m_LocalScale: {x: 0.5769231, y: 0.5769231, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0.0039953454, y: 3.626, z: 0}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 1.5600001}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 973536278}
   m_RootOrder: 0
@@ -1316,21 +1316,23 @@ MonoBehaviour:
   parentObject: {fileID: 0}
   scoreadder: 20
   childObject: {fileID: 0}
+  gameSceneSettings: {fileID: 30246345}
   audioSource: {fileID: 904098973}
   experimentSong: {fileID: 8300000, guid: 1903d4920771d1d478deb42fed573c6f, type: 3}
   rebornObject: {fileID: 0}
   rebornTransform: {x: 0, y: 0, z: 0}
   rebornRotation: {fileID: 0}
   SpriteList:
-  - {fileID: 21300000, guid: bf42454089c398447b1b0a91d84080db, type: 3}
-  - {fileID: 21300000, guid: beee44c6313cdca43822b1e693cdb00a, type: 3}
-  - {fileID: 21300000, guid: b03110cab00c56e49bb75bbf9669e845, type: 3}
-  - {fileID: 21300000, guid: ae13ba384c1200041a6d07e9c4d1319b, type: 3}
-  - {fileID: 21300000, guid: 0a58fdedf9cecb2499560d9de55495cc, type: 3}
-  - {fileID: 21300000, guid: 44639a08c8c2269418957ab45408691c, type: 3}
-  - {fileID: 21300000, guid: 12c8f647744f26748ab44cbd44e9536f, type: 3}
-  - {fileID: 21300000, guid: 8b599b8ae76fd4c4084f65e15c3e476c, type: 3}
-  - {fileID: 21300000, guid: 201ebb8183056c841be2c871619a898d, type: 3}
+  - {fileID: 21300000, guid: f3b220181aa1f884dbf56ca15cee9a20, type: 3}
+  - {fileID: 21300000, guid: 218d44ac47a5aa44c858909951f2b3ed, type: 3}
+  - {fileID: 21300000, guid: a0be08ef334f7f745bfe110e3232fbce, type: 3}
+  - {fileID: 21300000, guid: 9914c513b01574a4eb6ad2b12213ea69, type: 3}
+  - {fileID: 21300000, guid: 40800660da9f86b4f8d9048e8140f7ea, type: 3}
+  - {fileID: 21300000, guid: 64a450f8c41432144838b9cd0eaf5cb6, type: 3}
+  - {fileID: 21300000, guid: 40fe624fb28e46041af5d8ce8c138b22, type: 3}
+  - {fileID: 21300000, guid: 58b56ec162b455640ab9acb82f65217b, type: 3}
+  - {fileID: 21300000, guid: 2147609fe7266d94996c6f2cb7d40830, type: 3}
+  - {fileID: 21300000, guid: f3b220181aa1f884dbf56ca15cee9a20, type: 3}
   spriteCheck: 0
 --- !u!212 &904098971
 SpriteRenderer:
@@ -1373,7 +1375,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 60df36accde47754c833fe69b26732a4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40cec4bb31d3d28419fb3212aa413c8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1397,8 +1399,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0124925375, y: -0.095911026}
-  m_Size: {x: 2.245971, y: 4.6622095}
+  m_Offset: {x: -0.004411698, y: -0.024713043}
+  m_Size: {x: 1.5112374, y: 2.996959}
   m_Direction: 0
 --- !u!82 &904098973
 AudioSource:

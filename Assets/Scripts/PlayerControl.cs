@@ -24,7 +24,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private GameObject childObject;
 
     [Header("Sound Settings")]
-
+    [SerializeField] private GameSceneSettings gameSceneSettings;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip experimentSong;
 
@@ -40,8 +40,17 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
-        spriteCheck= PlayerPrefs.GetInt("Character");
-        gameObject.GetComponent<SpriteRenderer>().sprite = SpriteList[spriteCheck - 1];
+
+        if (PlayerPrefs.HasKey("Character"))
+        {
+            spriteCheck = PlayerPrefs.GetInt("Character");
+            gameObject.GetComponent<SpriteRenderer>().sprite = SpriteList[spriteCheck -1];
+        }
+        
+        
+
+
+        
 
         PlayerPrefs.SetInt("score",0);
         timerfixer = timer;
@@ -174,7 +183,11 @@ public class PlayerControl : MonoBehaviour
     }
     void Sound()
     {
-        audioSource.PlayOneShot(experimentSong);
+        if (gameSceneSettings.gamesound == 1)
+        {
+            audioSource.PlayOneShot(experimentSong);
+        }
+        
     }
     public void Reborn()
     {
