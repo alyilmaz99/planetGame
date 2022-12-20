@@ -33,6 +33,7 @@ public class ADManager : MonoBehaviour
         playerControl.Reborn();
         playerControl.endCheck = false;
         adCheck = false;
+        Time.timeScale = 1;
     }
 
     void Update()

@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
         if (playerControl.endCheck)
         {
             endScreen.SetActive(true);
+            Time.timeScale = 0;
         }
         else if (!playerControl.endCheck)
         {
