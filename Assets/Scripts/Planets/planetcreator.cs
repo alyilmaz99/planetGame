@@ -15,15 +15,18 @@ public class planetcreator : MonoBehaviour
     public Text[] scoretext;
     public GameObject player;
     public GameObject blackhole;
-    public GameObject[] fireball;
+    public List<GameObject> fireball;
     float firetimer;
-    public float firetime;
+    public float firetimeu;
+    public float firetimed;
     float firey;
     int fired;
     float holey;
     int holex;
     float y;
     Vector3 ps;
+    int fireb;
+    float firetime;
     void Start()
     {
         PlayerPrefs.SetInt("score",0);
@@ -36,7 +39,7 @@ public class planetcreator : MonoBehaviour
     {
         scoretext[0].text = PlayerPrefs.GetInt("score").ToString();
         scoretext[1].text = PlayerPrefs.GetInt("score").ToString();
-        if(Time.time > firetimer){
+        if(Time.time > firetimer && fireb == 1){
             firecreate();
         }
     }
@@ -47,7 +50,7 @@ public class planetcreator : MonoBehaviour
         y = Random.Range(limitUP, limitDOWN);
         Instantiate(planet[planetno], new Vector2(position.x + x, position.y + y), Quaternion.identity);
         firey = Random.Range(5, 12);
-        fired = Random.Range(0,2);
+        fired = Random.Range(0,fireball.Count + 1);
         holey = Random.Range(fireDOWN + 10, y - 5);
         holex = Random.Range(1,3);
         if(holex == 1){
@@ -57,12 +60,14 @@ public class planetcreator : MonoBehaviour
             Instantiate(blackhole,  new Vector2(position.x + x - 13, position.y + y + holey), Quaternion.identity);
         }
         firetimer = Time.time + 1f;
+        fireb = Random.Range(1,3);
     }
     public void firecreate(){
-        if(fired == 0)
-        Instantiate(fireball[0], new Vector2(player.transform.position.x - 14, ps.y + firey + 3), Quaternion.identity);
+        if(fired % 2 == 0)
+        Instantiate(fireball[fired], new Vector2(player.transform.position.x - 14, ps.y + firey + 3), Quaternion.identity);
         else
-        Instantiate(fireball[1], new Vector2(player.transform.position.x + 14, ps.y + firey + 3), Quaternion.identity);
+        Instantiate(fireball[fired], new Vector2(player.transform.position.x + 14, ps.y + firey + 3), Quaternion.identity);
+        firetime = Random.Range(firetimed,firetimeu);
         firetimer = Time.time + firetime - (PlayerPrefs.GetFloat("score")/250);
     }
     public void holecreate(){
