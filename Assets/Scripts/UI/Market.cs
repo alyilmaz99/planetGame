@@ -18,10 +18,17 @@ public class Market : MonoBehaviour
     [SerializeField] private GameObject buyPanel;
 
     [SerializeField] private TextMeshProUGUI priceText;
+    [SerializeField] private TextMeshProUGUI goldText;
     [SerializeField] private int priceGold=0;
+
+    [Header("BuyGold")]
+    [SerializeField] private GameObject buyGoldPanel;
+
 
     private void Start()
     {
+
+
         if (PlayerPrefs.HasKey("gold"))
         {
             gold = PlayerPrefs.GetInt("gold");
@@ -34,6 +41,8 @@ public class Market : MonoBehaviour
 
     private void Update()
     {
+
+        goldText.text = gold.ToString();
 
         priceText.text = ("Do you want to buy this character for " + priceGold + " GOLD?");
 
@@ -320,5 +329,33 @@ public class Market : MonoBehaviour
             buyCheck[8] = true;
         }
     }
+
+    #region Buy Gold
+
+    public void OpenBuyGoldMenu()
+    {
+        buyGoldPanel.gameObject.SetActive(true);
+    }
+    public void CloseBuyGoldMenu()
+    {
+        buyGoldPanel.gameObject.SetActive(false);
+    }
+
+    public void Buy500gold()
+    {
+        Debug.Log("gold aldim");
+        gold += 500;
+    }
+    public void Buy2500gold()
+    {
+        gold += 2500;
+    }
+    public void Buy10000gold()
+    {
+        gold += 10000;
+    }
+
+    #endregion
+
 
 }

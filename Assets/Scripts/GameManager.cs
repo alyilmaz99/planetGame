@@ -13,11 +13,12 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject pauseScreen;
 
-    
+
+
 
     void Start()
     {
-        
+       
     }
 
     
