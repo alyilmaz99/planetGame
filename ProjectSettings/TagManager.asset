@@ -8,6 +8,7 @@ TagManager:
   - Planet
   - creator
   - manager
+  - gold
   layers:
   - Default
   - TransparentFX

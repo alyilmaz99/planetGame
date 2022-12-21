@@ -34,11 +34,16 @@ public class GameManager : MonoBehaviour
         {
             endScreen.SetActive(true);
             Time.timeScale = 0;
+            Invoke("goldgiv",0.3f);
         }
         else if (!playerControl.endCheck)
         {
             endScreen.SetActive(false);
         }
+    }
+    public void goldgiv(){
+        var gold = GameObject.FindGameObjectWithTag("gold").GetComponent<goldgiver>();
+        gold.goldgive();
     }
 
     public void PauseGame()
