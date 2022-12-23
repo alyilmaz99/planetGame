@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 17
+  scoretext: {fileID: 3059031759976484469, guid: 86017e1caf0597848befdeb649e24c43, type: 3}
 --- !u!58 &7759013347371028336
 CircleCollider2D:
   m_ObjectHideFlags: 0
