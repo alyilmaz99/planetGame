@@ -6,6 +6,7 @@ public class planetkod : MonoBehaviour
 {
     public int score;
     float timer;
+    public GameObject scoretext;
     void Start()
     {
         
@@ -19,6 +20,8 @@ public class planetkod : MonoBehaviour
     {
         var hit = coll.gameObject;
         if(hit.tag == "Player" && Time.time > timer){
+            PlayerPrefs.SetInt("lastscore",score);
+            Instantiate(scoretext, new Vector2(transform.position.x + 5, transform.position.y), Quaternion.identity);
             PlayerPrefs.SetInt("score",PlayerPrefs.GetInt("score")+ score);
             var creator = GameObject.FindGameObjectWithTag("creator").GetComponent<planetcreator>();
             creator.planetcreate(transform.position);
