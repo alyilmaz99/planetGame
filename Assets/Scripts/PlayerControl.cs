@@ -70,24 +70,72 @@ public class PlayerControl : MonoBehaviour
     {
         if (other.gameObject.tag == "Planet")
         {
-            
+            ////first movement system
+            //flyCheck = false;
+            //timerBool = true;
+            //timer = timerfixer;
+            //Debug.Log("Planet enter");
+
+            //transform.parent = other.gameObject.transform;
+
+            //transform.rotation = Quaternion.Euler(0, 0, 180f);
+
+            ////rebornSettings
+
+            //rebornTransform = (transform.position);
+            //rebornObject = other.gameObject;
+
+
+
+
+            //other movement system
             flyCheck = false;
             timerBool = true;
             timer = timerfixer;
             Debug.Log("Planet enter");
 
+
+
+            transform.rotation = Quaternion.Euler(0, 0, 180f);
+
+            childObject.transform.parent = null;
+            transform.parent = null;
+            transform.parent = childObject.transform;
+
+
+            transform.parent = childObject.gameObject.transform;
+            //transform.parent = other.gameObject.transform;
+
+            //angle
+            Vector3 norTar = (other.gameObject.transform.position - childObject.transform.position).normalized;
+            float angle = Mathf.Atan2(norTar.y, norTar.x) * Mathf.Rad2Deg;
+            Quaternion rotation = new Quaternion();
+            rotation.eulerAngles = new Vector3(0, 0, angle - 90);
+            childObject.transform.rotation = rotation;
+            //angle finished
+
+            childObject.transform.Rotate(0, 0, 180, Space.Self);
+
+
+            transform.parent = null;
+
+            childObject.transform.parent = gameObject.transform;
+
+            float distance = Vector3.Distance(other.gameObject.transform.position, transform.position);
+            Debug.Log(distance);
+
+            if (distance > 5.2f)
+            {
+                //float off = distance - 5.2f;
+                transform.localPosition += new Vector3(0, -0f, 0);
+            }
+
             transform.parent = other.gameObject.transform;
 
-            
-            
-            transform.rotation = Quaternion.Euler(0,0,180f);
-            //transform.rotation = childObject.transform.rotation;
-
-            //rebornSettings
+            ////rebornSettings
 
             rebornTransform = (transform.position);
             rebornObject = other.gameObject;
-
 
 
 
