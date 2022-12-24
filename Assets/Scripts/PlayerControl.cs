@@ -24,7 +24,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private GameObject childObject;
 
     [Header("Sound Settings")]
-
+    [SerializeField] private GameSceneSettings gameSceneSettings;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip experimentSong;
 
@@ -40,8 +40,17 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
-        spriteCheck= PlayerPrefs.GetInt("Character");
-        gameObject.GetComponent<SpriteRenderer>().sprite = SpriteList[spriteCheck - 1];
+
+        if (PlayerPrefs.HasKey("Character"))
+        {
+            spriteCheck = PlayerPrefs.GetInt("Character");
+            gameObject.GetComponent<SpriteRenderer>().sprite = SpriteList[spriteCheck -1];
+        }
+        
+        
+
+
+        
 
         PlayerPrefs.SetInt("score",0);
         timerfixer = timer;
@@ -61,24 +70,72 @@ public class PlayerControl : MonoBehaviour
     {
         if (other.gameObject.tag == "Planet")
         {
-            
+            ////first movement system
+            //flyCheck = false;
+            //timerBool = true;
+            //timer = timerfixer;
+            //Debug.Log("Planet enter");
+
+            //transform.parent = other.gameObject.transform;
+
+            //transform.rotation = Quaternion.Euler(0, 0, 180f);
+
+            ////rebornSettings
+
+            //rebornTransform = (transform.position);
+            //rebornObject = other.gameObject;
+
+
+
+
+            //other movement system
             flyCheck = false;
             timerBool = true;
             timer = timerfixer;
             Debug.Log("Planet enter");
 
+
+
+            transform.rotation = Quaternion.Euler(0, 0, 180f);
+
+            childObject.transform.parent = null;
+            transform.parent = null;
+            transform.parent = childObject.transform;
+
+
+            transform.parent = childObject.gameObject.transform;
+            //transform.parent = other.gameObject.transform;
+
+            //angle
+            Vector3 norTar = (other.gameObject.transform.position - childObject.transform.position).normalized;
+            float angle = Mathf.Atan2(norTar.y, norTar.x) * Mathf.Rad2Deg;
+            Quaternion rotation = new Quaternion();
+            rotation.eulerAngles = new Vector3(0, 0, angle - 90);
+            childObject.transform.rotation = rotation;
+            //angle finished
+
+            childObject.transform.Rotate(0, 0, 180, Space.Self);
+
+
+            transform.parent = null;
+
+            childObject.transform.parent = gameObject.transform;
+
+            float distance = Vector3.Distance(other.gameObject.transform.position, transform.position);
+            Debug.Log(distance);
+
+            if (distance > 5.2f)
+            {
+                //float off = distance - 5.2f;
+                transform.localPosition += new Vector3(0, -0f, 0);
+            }
+
             transform.parent = other.gameObject.transform;
 
-            
-            
-            transform.rotation = Quaternion.Euler(0,0,180f);
-            //transform.rotation = childObject.transform.rotation;
-
-            //rebornSettings
+            ////rebornSettings
 
             rebornTransform = (transform.position);
             rebornObject = other.gameObject;
-
 
 
 
@@ -98,19 +155,30 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        
         if (other.gameObject.tag == "Planet")
         {
-            Debug.Log("Planeeeeet exiiitt");
+            Debug.Log("Planet exit");
 
            Destroy(other.gameObject, 60f);
            timerBool = false;
        }
+
+        if (other.gameObject.tag == "First Planet")
+        {
+            Debug.Log("First Planet exit");
+
+            Destroy(other.gameObject, 60f);
+            timerBool = false;
+        }
     }
 
     void Movement()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Sound();
+            Vibration();
             transform.parent = null;
             flyCheck = true;
         }
@@ -149,6 +217,7 @@ public class PlayerControl : MonoBehaviour
 
     void Vibration()
     {
+        Handheld.Vibrate();
         if (PlayerPrefs.GetInt("vibrationPref") == 1)
         {
             Handheld.Vibrate();
@@ -162,17 +231,11 @@ public class PlayerControl : MonoBehaviour
     }
     void Sound()
     {
-        if (PlayerPrefs.GetInt("soundPref") == 1)
+        if (gameSceneSettings.gamesound == 1)
         {
-            // music code
             audioSource.PlayOneShot(experimentSong);
-            Debug.Log("muzik dinliyoruz");
         }
-        else if (PlayerPrefs.GetInt("soundPref") == 0)
-        {
-            // music code
-            Debug.Log("muzik dinlemiyoruz");
-        }
+        
     }
     public void Reborn()
     {

@@ -13,9 +13,16 @@ public class ADManager : MonoBehaviour
     [SerializeField] private bool adCheck = false;
     [SerializeField] private string adUnityId="";
 
+
+    [SerializeField] private int noadsCheck;
+
     void Start()
     {
-        
+
+
+        noadsCheck= PlayerPrefs.GetInt("noads");
+
+
 #if UNITY_ANDROID
         adUnityId = "ca-app-pub-3940256099942544/5354046379";
 #endif
@@ -33,6 +40,7 @@ public class ADManager : MonoBehaviour
         playerControl.Reborn();
         playerControl.endCheck = false;
         adCheck = false;
+        Time.timeScale = 1;
     }
 
     void Update()
@@ -60,11 +68,24 @@ public class ADManager : MonoBehaviour
 
     public void WatchRebornAd()
     {
-        if (!adCheck)
+        if (noadsCheck == 1)
         {
-            WatchAd();
-            adCheck = true;
+            Debug.Log("yeniden dogdu");
+
+            playerControl.Reborn();
+            playerControl.endCheck = false;
+            Time.timeScale = 1;
         }
+        else {
+            if (!adCheck)
+            {
+                WatchAd();
+                adCheck = true;
+            }
+        }
+        
+        
+        
     }
 
     public void RequestAndLoadAD()

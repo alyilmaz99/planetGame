@@ -27,13 +27,30 @@ public class MainMenu : MonoBehaviour
     public int sound;
     public int vib;
 
+
+    [Header("No Ads")]
+    [SerializeField] private GameObject noAdsButton;
+    [SerializeField] private GameObject noAdsButton2;
+
+    [SerializeField] private int adsCheck;
+    [SerializeField] private bool adsReset;
+
+
     private void Start()
     {
         SetPlayerPrefs();
+
+
+        SetAdsCheck();
     }
     private void Update()
     {
-        
+        if (adsReset)
+        {
+            PlayerPrefs.SetInt("noads", 0);
+            adsCheck = PlayerPrefs.GetInt("noads");
+        }
+
         CheckImages();
         PlayerPrefsUpdate();
         //sound =PlayerPrefs.GetInt("soundPref");
@@ -163,5 +180,36 @@ public class MainMenu : MonoBehaviour
             vibrationPrefBool = false;
         }
     }
+
+    #region Noads
+
+    private void SetAdsCheck()
+    {
+        adsCheck = PlayerPrefs.GetInt("noads");
+
+        if (adsCheck == 1)
+        {
+            noAdsButton.gameObject.SetActive(false);
+            noAdsButton2.gameObject.SetActive(true);
+
+
+        }
+        else
+        {
+            noAdsButton.gameObject.SetActive(true);
+            noAdsButton2.gameObject.SetActive(false);
+        }
+    }
+
+    public void noAdsBuyButton()
+    {
+        Debug.Log("satin alindi reklamsiz oyun");
+        PlayerPrefs.SetInt("noads", 1);
+        adsCheck = PlayerPrefs.GetInt("noads");
+        SetAdsCheck();
+
+    }
+
+    #endregion
 
 }
