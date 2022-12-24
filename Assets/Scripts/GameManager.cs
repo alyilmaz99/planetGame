@@ -34,7 +34,8 @@ public class GameManager : MonoBehaviour
         {
             endScreen.SetActive(true);
             Time.timeScale = 0;
-            Invoke("goldgiv",0.3f);
+            Debug.Log("endscreen debug");
+            goldgiv();
         }
         else if (!playerControl.endCheck)
         {
@@ -42,7 +43,8 @@ public class GameManager : MonoBehaviour
         }
     }
     public void goldgiv(){
-        var gold = GameObject.FindGameObjectWithTag("gold").GetComponent<goldgiver>();
+        Debug.Log("fonksiyon deneme");
+        var gold = GameObject.FindGameObjectWithTag("manager").GetComponent<goldgiver>();
         gold.goldgive();
     }
 
