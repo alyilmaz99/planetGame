@@ -9,6 +9,7 @@ TagManager:
   - creator
   - manager
   - gold
+  - Wall
   layers:
   - Default
   - TransparentFX

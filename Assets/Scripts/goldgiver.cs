@@ -22,7 +22,7 @@ public class goldgiver : MonoBehaviour
     }
     public void goldgive(){
 
-        Debug.Log("denemeeeeeee");
+        //Debug.Log("denemeeeeeee");
         if(Time.time > timer){
             PlayerPrefs.SetInt("gold", PlayerPrefs.GetInt("gold") + gold);
             Debug.Log(PlayerPrefs.GetInt("gold"));
