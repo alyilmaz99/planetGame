@@ -2056,6 +2056,8 @@ GameObject:
   - component: {fileID: 973536277}
   - component: {fileID: 973536276}
   - component: {fileID: 973536275}
+  - component: {fileID: 973536279}
+  - component: {fileID: 973536280}
   m_Layer: 0
   m_Name: planet7
   m_TagString: First Planet
@@ -2160,6 +2162,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &973536279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973536274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa03f778e0b7d424d9f4b7a7f75311b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 973536277}
+  newSprite:
+  - {fileID: 21300000, guid: a70e2e630d66c324caed761941512cac, type: 3}
+  - {fileID: 21300000, guid: c9dc4c028fb594c4c8cafe0e1a63f744, type: 3}
+  - {fileID: 21300000, guid: 519d2a1112f94854fbccb7af0168c4c7, type: 3}
+  - {fileID: 21300000, guid: 8c0071c75a4807f438c54cd0e5dadfce, type: 3}
+  - {fileID: 21300000, guid: 47035c32b8f0ede4c8d8e0ace494d0ba, type: 3}
+  - {fileID: 21300000, guid: 7689b35a5860fa14a9d3490fc77e8ebe, type: 3}
+  - {fileID: 21300000, guid: 3b7f8f8b9a4139c41b7339660ebbe6b5, type: 3}
+  - {fileID: 21300000, guid: b008d8def8917f146b1229e4bdc9b0c1, type: 3}
+  - {fileID: 21300000, guid: d0972e22232cdd84192b47a6d27fa0c9, type: 3}
+  - {fileID: 21300000, guid: 7f8a9e18bfb889d4a8c0fd81841d4461, type: 3}
+  - {fileID: 21300000, guid: 54e346aed1dfc684ba8972ca28c0d05d, type: 3}
+--- !u!114 &973536280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973536274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3c3892f92297943a666d07851d6508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  scoretext: {fileID: 0}
 --- !u!1 &1022341058
 GameObject:
   m_ObjectHideFlags: 0
@@ -3947,6 +3988,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!212 &805852124994090313 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9188314395547769593, guid: b0594dbb328c80c41bc71a19d612b44e, type: 3}
+  m_PrefabInstance: {fileID: 8407522856606347195}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &805852124994090315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805852124994090305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa03f778e0b7d424d9f4b7a7f75311b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 805852124994090313}
+  newSprite:
+  - {fileID: 21300000, guid: a70e2e630d66c324caed761941512cac, type: 3}
+  - {fileID: 21300000, guid: c9dc4c028fb594c4c8cafe0e1a63f744, type: 3}
+  - {fileID: 21300000, guid: 519d2a1112f94854fbccb7af0168c4c7, type: 3}
+  - {fileID: 21300000, guid: 8c0071c75a4807f438c54cd0e5dadfce, type: 3}
+  - {fileID: 21300000, guid: 47035c32b8f0ede4c8d8e0ace494d0ba, type: 3}
+  - {fileID: 21300000, guid: 7689b35a5860fa14a9d3490fc77e8ebe, type: 3}
+  - {fileID: 21300000, guid: 3b7f8f8b9a4139c41b7339660ebbe6b5, type: 3}
+  - {fileID: 21300000, guid: b008d8def8917f146b1229e4bdc9b0c1, type: 3}
+  - {fileID: 21300000, guid: d0972e22232cdd84192b47a6d27fa0c9, type: 3}
+  - {fileID: 21300000, guid: 7f8a9e18bfb889d4a8c0fd81841d4461, type: 3}
+  - {fileID: 21300000, guid: 54e346aed1dfc684ba8972ca28c0d05d, type: 3}
 --- !u!114 &861324329470183691
 MonoBehaviour:
   m_ObjectHideFlags: 0
