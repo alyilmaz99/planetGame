@@ -13,6 +13,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject pauseScreen;
 
+    [SerializeField] private GameObject pauseButton;
+    [SerializeField] private GameObject pauseScreenButtons;
+
+    [SerializeField] private GameObject scoreGameObject;
+
 
 
 
@@ -33,8 +38,12 @@ public class GameManager : MonoBehaviour
         if (playerControl.endCheck)
         {
             endScreen.SetActive(true);
+
+            pauseButton.SetActive(false);
+            scoreGameObject.SetActive(false);
+
             Time.timeScale = 0;
-            Debug.Log("endscreen debug");
+            
             goldgiv();
         }
         else if (!playerControl.endCheck)
@@ -43,7 +52,7 @@ public class GameManager : MonoBehaviour
         }
     }
     public void goldgiv(){
-        Debug.Log("fonksiyon deneme");
+        //Debug.Log("fonksiyon deneme");
         var gold = GameObject.FindGameObjectWithTag("manager").GetComponent<goldgiver>();
         gold.goldgive();
     }
@@ -52,12 +61,14 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
         pauseScreen.SetActive(true);
+        pauseButton.SetActive(false);
     }
 
     public void ContinueGame()
     {
         Time.timeScale = 1;
         pauseScreen.SetActive(false);
+        pauseButton.SetActive(true);
     }
 
     public void ReturnToMainMenu()

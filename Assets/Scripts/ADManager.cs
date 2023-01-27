@@ -16,6 +16,12 @@ public class ADManager : MonoBehaviour
 
     [SerializeField] private int noadsCheck;
 
+
+    [Header("buttons close")]
+    [SerializeField] private GameObject scoreGameObject;
+    [SerializeField] private GameObject pauseButton;
+
+
     void Start()
     {
 
@@ -36,10 +42,13 @@ public class ADManager : MonoBehaviour
     private void Reborn(object sender, Reward e)
     {
         Debug.Log("yeniden dogdu");
-        
+        pauseButton.SetActive(true);
+        scoreGameObject.SetActive(true);
+
         playerControl.Reborn();
         playerControl.endCheck = false;
         adCheck = false;
+        
         Time.timeScale = 1;
     }
 
@@ -71,7 +80,8 @@ public class ADManager : MonoBehaviour
         if (noadsCheck == 1)
         {
             Debug.Log("yeniden dogdu");
-
+            pauseButton.SetActive(true);
+            scoreGameObject.SetActive(true);
             playerControl.Reborn();
             playerControl.endCheck = false;
             Time.timeScale = 1;

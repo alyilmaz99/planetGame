@@ -92,7 +92,7 @@ public class PlayerControl : MonoBehaviour
             flyCheck = false;
             timerBool = true;
             timer = timerfixer;
-            Debug.Log("Planet enter");
+            //Debug.Log("Planet enter");
 
 
 
@@ -122,7 +122,7 @@ public class PlayerControl : MonoBehaviour
             childObject.transform.parent = gameObject.transform;
 
             float distance = Vector3.Distance(other.gameObject.transform.position, transform.position);
-            Debug.Log(distance);
+            //Debug.Log(distance);
 
             if (distance > 5.2f)
             {
@@ -143,6 +143,8 @@ public class PlayerControl : MonoBehaviour
             Sound();
 
         }
+
+        
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -158,7 +160,7 @@ public class PlayerControl : MonoBehaviour
         
         if (other.gameObject.tag == "Planet")
         {
-            Debug.Log("Planet exit");
+            //Debug.Log("Planet exit");
 
            Destroy(other.gameObject, 60f);
            timerBool = false;
@@ -166,7 +168,7 @@ public class PlayerControl : MonoBehaviour
 
         if (other.gameObject.tag == "First Planet")
         {
-            Debug.Log("First Planet exit");
+            //Debug.Log("First Planet exit");
 
             Destroy(other.gameObject, 60f);
             timerBool = false;
