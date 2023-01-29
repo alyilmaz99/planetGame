@@ -27,6 +27,7 @@ public class planetcreator : MonoBehaviour
     Vector3 ps;
     int fireb;
     float firetime;
+    int planetno;
     void Start()
     {
         PlayerPrefs.SetInt("score",0);
@@ -45,7 +46,18 @@ public class planetcreator : MonoBehaviour
     }
     public void planetcreate(Vector3 position){
         ps = position;
-        int planetno = Random.Range(1, 11);
+        int rastgeleSayi = Random.Range(1, 11);
+        if (planetno != rastgeleSayi){
+            planetno = rastgeleSayi;
+
+        }
+        else if(planetno == rastgeleSayi){
+            if(planetno < 10)
+            planetno = planetno + 1;
+            else
+            planetno = planetno - 1;
+        
+        }
         int x = Random.Range(limitLEFT, limitRIGHT);
         y = Random.Range(limitUP, limitDOWN);
         Instantiate(planet[planetno], new Vector2(position.x + x, position.y + y), Quaternion.identity);
