@@ -25,7 +25,7 @@ public class goldgiver : MonoBehaviour
         //Debug.Log("denemeeeeeee");
         if(Time.time > timer){
             PlayerPrefs.SetInt("gold", PlayerPrefs.GetInt("gold") + gold);
-            Debug.Log(PlayerPrefs.GetInt("gold"));
+            //Debug.Log(PlayerPrefs.GetInt("gold"));
             timer = Time.time + 1000000f;
             goldtext.text = gold.ToString();
         }

@@ -10,7 +10,7 @@ public class LanguageScript : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(Scenetexts.Count);
+       // Debug.Log(Scenetexts.Count);
         
         
         
