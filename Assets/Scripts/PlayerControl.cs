@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using static UnityEngine.GraphicsBuffer;
 
 public class PlayerControl : MonoBehaviour
@@ -181,13 +182,14 @@ public class PlayerControl : MonoBehaviour
         {
             Sound();
             Vibration();
-            transform.parent = null;
-            flyCheck = true;
+            //transform.parent = null;
+            //flyCheck = true;
         }
         for (int i = 0; i < Input.touchCount; ++i)
         {
-            if (Input.GetTouch(i).phase == TouchPhase.Began)
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
             {
+                Debug.Log("deeeee");
                 transform.parent = null;
                 flyCheck = true;
             }
