@@ -40,8 +40,7 @@ public static class PListProcessor
         PlistDocument plist = new PlistDocument();
         plist.ReadFromFile(plistPath);
 
-        GoogleMobileAdsSettings instance = GoogleMobileAdsSettings.LoadInstance();
-        string appId = instance.GoogleMobileAdsIOSAppId;
+        string appId = GoogleMobileAdsSettings.Instance.GoogleMobileAdsIOSAppId;
         if (appId.Length == 0)
         {
             NotifyBuildFailure(
@@ -52,7 +51,7 @@ public static class PListProcessor
             plist.root.SetString("GADApplicationIdentifier", appId);
         }
 
-        if (instance.DelayAppMeasurementInit)
+        if (GoogleMobileAdsSettings.Instance.DelayAppMeasurementInit)
         {
             plist.root.SetBoolean("GADDelayAppMeasurementInit", true);
         }
