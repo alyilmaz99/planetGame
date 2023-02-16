@@ -6,72 +6,49 @@ using UnityEngine.UI;
 
 public class GameSceneSettings : MonoBehaviour
 {
-    [SerializeField] private Button soundButton;
-    [SerializeField] private Sprite noSound;
-    [SerializeField] private Sprite withSound;
-
-    [SerializeField] private Button vibButton;
-    [SerializeField] private Sprite noVib;
-    [SerializeField] private Sprite withVib;
-
-
-    [SerializeField] private bool soundPrefBool;
-    [SerializeField] private bool vibrationPrefBool;
-
+    [SerializeField] private PlayerControl playerControl;
+    [SerializeField] private Image retryImage;
     [SerializeField] private GameObject settingsScreen;
-
-    public int gamesound;
-    public int gamevib;
+    [SerializeField] private int fillAmountSpeed;
 
 
+    #region Sound
+    [Header("sound/Vib Settings")]
+    [SerializeField] private GameObject soundButton;
+    [SerializeField] private GameObject vibButton;
+    [SerializeField] private List<Sprite> soundSpriteList = new List<Sprite>();
+    [SerializeField] private List<Sprite> vibSpriteList = new List<Sprite>();
+
+    [SerializeField] private bool soundFixer;
+    [SerializeField] private bool vibFixer;
+    #endregion
 
     void Start()
     {
-        gamesound = PlayerPrefs.GetInt("soundPref");
-        gamevib = PlayerPrefs.GetInt("vibrationPref");
-        SetPlayerPrefs();
+        StartSoundVibCheck();
+        retryImage.fillAmount = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        SetPlayerBooleans();
-        CheckImages();
 
-        gamesound = PlayerPrefs.GetInt("soundPref");
-        gamevib = PlayerPrefs.GetInt("vibrationPref");
+        SoundVibUpdate();
+        if (playerControl.endCheck)
+        {
+            retryImage.fillAmount -= Time.unscaledDeltaTime/ fillAmountSpeed;
+        }
+        else 
+        {
+                retryImage.fillAmount = 1;
+        }
+            
+        
+
     }
 
-    public void SoundSetting()
-    {
-        soundPrefBool = !soundPrefBool;
-
-    }
-    public void VibrationSetting()
-    {
-        vibrationPrefBool = !vibrationPrefBool;
-
-    }
-    public void CheckImages()
-    {
-        if (soundPrefBool)
-        {
-            soundButton.GetComponent<Image>().sprite = withSound;
-        }
-        if (!soundPrefBool)
-        {
-            soundButton.GetComponent<Image>().sprite = noSound;
-        }
-        if (vibrationPrefBool)
-        {
-            vibButton.GetComponent<Image>().sprite = withVib;
-        }
-        if (!vibrationPrefBool)
-        {
-            vibButton.GetComponent<Image>().sprite = noVib;
-        }
-    }
-
+    
+    
     public void BackButtonGameSceneSettings()
     {
 
@@ -83,49 +60,69 @@ public class GameSceneSettings : MonoBehaviour
         settingsScreen.SetActive(true);
     }
 
-    void SetPlayerPrefs()
+
+    #region Sound-Vib Controller
+
+    public void SoundButton()
     {
-        if (gamesound == 1)
+        soundFixer = !soundFixer;
+    }
+    public void VibButton()
+    {
+        vibFixer = !vibFixer;
+    }
+
+
+    void SoundVibUpdate()
+    {
+        if (soundFixer)
         {
-            soundPrefBool = true;
+            PlayerPrefs.SetInt("sound", 1);
+            soundButton.GetComponent<Image>().sprite = soundSpriteList[1];
         }
-        else if(gamesound == 0)
+        else if (!soundFixer)
         {
-            soundPrefBool = false;
+            PlayerPrefs.SetInt("sound", 0);
+            soundButton.GetComponent<Image>().sprite = soundSpriteList[0];
         }
-        if (gamevib == 1)
+
+        if (vibFixer)
         {
-            vibrationPrefBool = true;
+            PlayerPrefs.SetInt("vib", 1);
+            vibButton.GetComponent<Image>().sprite = vibSpriteList[1];
         }
-        else if (gamevib == 0)
+        else if (!vibFixer)
         {
-            vibrationPrefBool = false;
+            PlayerPrefs.SetInt("vib", 0);
+            vibButton.GetComponent<Image>().sprite = vibSpriteList[0];
+        }
+
+    }
+
+
+    void StartSoundVibCheck()
+    {
+        if (PlayerPrefs.GetInt("sound") == 1)
+        {
+            soundFixer = true;
+        }
+        else if (PlayerPrefs.GetInt("sound") == 0)
+        {
+            soundFixer = false;
+        }
+
+        if (PlayerPrefs.GetInt("vib") == 1)
+        {
+            vibFixer = true;
+        }
+        else if (PlayerPrefs.GetInt("vib") == 0)
+        {
+            vibFixer = false;
         }
     }
 
-    void SetPlayerBooleans()
-    {
-        if (soundPrefBool)
-        {
-            PlayerPrefs.SetInt("soundPref", 1);
-        }
-        if (!soundPrefBool)
-        {
-            PlayerPrefs.SetInt("soundPref", 0);
-        }
-        if (vibrationPrefBool)
-        {
-            PlayerPrefs.SetInt("vibrationPref", 1);
-        }
-        if (!vibrationPrefBool)
-        {
-            PlayerPrefs.SetInt("vibrationPref", 0);
-        }
-    }
+    #endregion
 
-    
 
-    
 
-    
 }

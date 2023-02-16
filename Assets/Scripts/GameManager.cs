@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
             pauseButton.SetActive(false);
             scoreGameObject.SetActive(false);
 
-            Time.timeScale = 0;
+            Time.timeScale = 0f;
             
             goldgiv();
         }

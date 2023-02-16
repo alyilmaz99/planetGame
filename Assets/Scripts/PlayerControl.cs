@@ -221,13 +221,13 @@ public class PlayerControl : MonoBehaviour
 
     void Vibration()
     {
-        Handheld.Vibrate();
-        if (PlayerPrefs.GetInt("vibrationPref") == 1)
+        
+        if (PlayerPrefs.GetInt("vib") == 1)
         {
             Handheld.Vibrate();
             Debug.Log("titriyoruz");
         }
-        else if (PlayerPrefs.GetInt("vibrationPref") == 0)
+        else if (PlayerPrefs.GetInt("vib") == 0)
         {
             Debug.Log("titremiyoruz");
         }
@@ -235,7 +235,7 @@ public class PlayerControl : MonoBehaviour
     }
     void Sound()
     {
-        if (gameSceneSettings.gamesound == 1)
+        if (PlayerPrefs.GetInt("sound") == 1)
         {
             audioSource.PlayOneShot(experimentSong);
         }
