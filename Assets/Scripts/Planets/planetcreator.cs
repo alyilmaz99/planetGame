@@ -12,6 +12,10 @@ public class planetcreator : MonoBehaviour
     public int limitDOWN;
     public int fireUP;
     public int fireDOWN;
+
+    public int fireRandomChance;
+
+
     public Text[] scoretext;
     public GameObject player;
     public GameObject blackhole;
@@ -72,7 +76,7 @@ public class planetcreator : MonoBehaviour
             Instantiate(blackhole,  new Vector2(position.x + x - 13, position.y + y + holey), Quaternion.identity);
         }
         firetimer = Time.time + 1f;
-        fireb = Random.Range(1,3);
+        fireb = Random.Range(1, fireRandomChance);
     }
     public void firecreate(){
         if(fired % 2 == 0)
