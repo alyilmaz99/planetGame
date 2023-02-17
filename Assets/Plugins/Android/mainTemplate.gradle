@@ -18,9 +18,15 @@ apply plugin: 'com.android.library'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
 // Android Resolver Dependencies Start
     implementation 'com.google.android.gms:play-services-ads:20.2.0' // Assets/GoogleMobileAds/Editor/GoogleMobileAdsDependencies.xml:7
+    implementation 'androidx.work:work-runtime:2.7.1' // api 31 bug fix
+
+
 // Android Resolver Dependencies End
+
+
 **DEPS**}
 
 // Android Resolver Exclusions Start
