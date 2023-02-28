@@ -189,7 +189,7 @@ public class PlayerControl : MonoBehaviour
         {
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && !EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
             {
-                Debug.Log("deeeee");
+                
                 transform.parent = null;
                 flyCheck = true;
             }
@@ -225,11 +225,11 @@ public class PlayerControl : MonoBehaviour
         if (PlayerPrefs.GetInt("vib") == 1)
         {
             Handheld.Vibrate();
-            Debug.Log("titriyoruz");
+           
         }
         else if (PlayerPrefs.GetInt("vib") == 0)
         {
-            Debug.Log("titremiyoruz");
+           
         }
 
     }
