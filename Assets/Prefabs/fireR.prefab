@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 4480131689077274288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.6, y: -2.1, z: 0}
-  m_LocalScale: {x: 4.4014177, y: 4.8904643, z: 4.8904643}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3.3333333, z: 3.3333333}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -167,7 +167,7 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!95 &6052057404170514205
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -184,4 +184,4 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0

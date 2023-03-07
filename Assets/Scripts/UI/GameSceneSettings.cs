@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameSceneSettings : MonoBehaviour
@@ -37,6 +38,10 @@ public class GameSceneSettings : MonoBehaviour
         if (playerControl.endCheck)
         {
             retryImage.fillAmount -= Time.unscaledDeltaTime/ fillAmountSpeed;
+            if (retryImage.fillAmount <= 0)
+            {
+                SceneManager.LoadScene(1);
+            }
         }
         else 
         {

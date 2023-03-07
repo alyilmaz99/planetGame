@@ -29,9 +29,12 @@ public class planetcreator : MonoBehaviour
     int holex;
     float y;
     Vector3 ps;
-    int fireb;
+    public int fireb;
     float firetime;
     int planetno;
+    GameObject lastPlanet=null;
+
+    [SerializeField] private int minY, maxY,planetY;
     void Start()
     {
         PlayerPrefs.SetInt("score",0);
@@ -64,8 +67,8 @@ public class planetcreator : MonoBehaviour
         }
         int x = Random.Range(limitLEFT, limitRIGHT);
         y = Random.Range(limitUP, limitDOWN);
-        Instantiate(planet[planetno], new Vector2(position.x + x, position.y + y), Quaternion.identity);
-        firey = Random.Range(5, 12);
+        lastPlanet = Instantiate(planet[planetno], new Vector2(position.x + x, position.y + planetY), Quaternion.identity);
+        firey = Random.Range(minY, maxY);
         fired = Random.Range(0,fireball.Count + 1);
         holey = Random.Range(fireDOWN + 10, y - 5);
         holex = Random.Range(1,3);
@@ -80,9 +83,9 @@ public class planetcreator : MonoBehaviour
     }
     public void firecreate(){
         if(fired % 2 == 0)
-        Instantiate(fireball[fired], new Vector2(player.transform.position.x - 14, ps.y + firey + 3), Quaternion.identity);
+        Instantiate(fireball[fired], new Vector2(player.transform.position.x - 14, lastPlanet.transform.position.y - firey), Quaternion.identity);
         else
-        Instantiate(fireball[fired], new Vector2(player.transform.position.x + 14, ps.y + firey + 3), Quaternion.identity);
+        Instantiate(fireball[fired], new Vector2(player.transform.position.x + 14, lastPlanet.transform.position.y + firey), Quaternion.identity);
         firetime = Random.Range(firetimed,firetimeu);
         firetimer = Time.time + firetime - (PlayerPrefs.GetFloat("score")/250);
     }
