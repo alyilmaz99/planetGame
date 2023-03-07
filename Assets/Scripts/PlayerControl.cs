@@ -9,7 +9,7 @@ public class PlayerControl : MonoBehaviour
 
     [SerializeField] private bool flyCheck = false;
 
-    [SerializeField] private float forcePower;
+    [SerializeField] private float forcePower, forcePower2;
     [SerializeField] private Vector2 rotationVector2 = new Vector2(0, 1);
 
     [SerializeField] private float timer;
@@ -23,8 +23,10 @@ public class PlayerControl : MonoBehaviour
     float speed;
 
     [SerializeField] private GameObject childObject;
+    public int planetCount;
+    
 
-    [Header("Sound Settings")]
+        [Header("Sound Settings")]
     [SerializeField] private GameSceneSettings gameSceneSettings;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip experimentSong;
@@ -47,9 +49,9 @@ public class PlayerControl : MonoBehaviour
             spriteCheck = PlayerPrefs.GetInt("Character");
             gameObject.GetComponent<SpriteRenderer>().sprite = SpriteList[spriteCheck -1];
         }
-        
-        
 
+
+        planetCount = 0;
 
         
 
@@ -65,6 +67,11 @@ public class PlayerControl : MonoBehaviour
     {
         Movement();
         EndGame();
+
+        if (planetCount > 5)
+        {
+            forcePower = forcePower2;
+        }
 
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -142,7 +149,7 @@ public class PlayerControl : MonoBehaviour
 
             Vibration();
             Sound();
-
+            planetCount++;
         }
 
         

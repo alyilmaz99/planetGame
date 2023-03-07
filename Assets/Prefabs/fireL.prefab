@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2981356362916606985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 44.402134, y: 3.1100368, z: 0}
-  m_LocalScale: {x: -4.401418, y: 5.5223494, z: 5.5223494}
+  m_LocalScale: {x: -3, y: 3.764025, z: 3.764025}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -167,7 +167,7 @@ MonoBehaviour:
   speed: 15
 --- !u!95 &954569382723961622
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -184,4 +184,4 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0

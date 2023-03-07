@@ -158,7 +158,7 @@ MonoBehaviour:
   playerControl: {fileID: 904098970}
   retryImage: {fileID: 1610430831}
   settingsScreen: {fileID: 3469697306928342718}
-  fillAmountSpeed: 30
+  fillAmountSpeed: 15
   soundButton: {fileID: 2979192018214280119}
   vibButton: {fileID: 7625697810611709631}
   soundSpriteList:
@@ -2037,6 +2037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyCheck: 0
   forcePower: 18
+  forcePower2: 25
   rotationVector2: {x: 0, y: 1}
   timer: 5
   timerBool: 1
@@ -2044,10 +2045,11 @@ MonoBehaviour:
   parentObject: {fileID: 0}
   scoreadder: 20
   childObject: {fileID: 2123412624}
+  planetCount: 0
   gameSceneSettings: {fileID: 30246345}
   audioSource: {fileID: 904098973}
   experimentSong: {fileID: 8300000, guid: 1903d4920771d1d478deb42fed573c6f, type: 3}
-  rebornObject: {fileID: 0}
+  rebornObject: {fileID: 973536274}
   rebornTransform: {x: 0, y: 0, z: 0}
   rebornRotation: {fileID: 0}
   SpriteList:
@@ -3764,6 +3766,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
+      propertyPath: maxY
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
+      propertyPath: minY
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: fireUP
       value: 15
       objectReference: {fileID: 0}
@@ -3774,6 +3784,10 @@ PrefabInstance:
     - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: limitUP
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
+      propertyPath: planetY
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: fireDOWN
@@ -3817,7 +3831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: fireRandomChance
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: planet.Array.size
