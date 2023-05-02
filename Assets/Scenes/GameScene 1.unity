@@ -778,7 +778,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &243518383
 GameObject:
@@ -2975,7 +2975,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1584038271
 GameObject:
@@ -3906,11 +3906,11 @@ PrefabInstance:
     - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: fireball.Array.data[0]
       value: 
-      objectReference: {fileID: 2981356362916606985, guid: 9959f6c750855dc4f9d972563f6c8892, type: 3}
+      objectReference: {fileID: 344971762514973388, guid: 0202ce5992c6c9740aa262fd10e0a8aa, type: 3}
     - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: fireball.Array.data[1]
       value: 
-      objectReference: {fileID: 4480131689077274288, guid: 0b65b9652266df94faf71cbe14e79c63, type: 3}
+      objectReference: {fileID: 5785045748299769527, guid: 201801103c6cd474a8c05b5e4d9c3191, type: 3}
     - target: {fileID: 1978205708446811276, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: fireball.Array.data[2]
       value: 
@@ -3925,7 +3925,7 @@ PrefabInstance:
       objectReference: {fileID: 867840189}
     - target: {fileID: 3028471422068194646, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3028471422068194646, guid: 96b2942423e083c4e99cc1868feb8197, type: 3}
       propertyPath: m_LocalPosition.x
