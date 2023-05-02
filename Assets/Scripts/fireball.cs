@@ -5,6 +5,7 @@ using UnityEngine;
 public class fireball : MonoBehaviour
 {
     public float speed;
+
     void Start()
     {
         Invoke("destroy",5f);

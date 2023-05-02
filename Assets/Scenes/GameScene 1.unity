@@ -158,7 +158,7 @@ MonoBehaviour:
   playerControl: {fileID: 904098970}
   retryImage: {fileID: 1610430831}
   settingsScreen: {fileID: 3469697306928342718}
-  fillAmountSpeed: 15
+  fillAmountSpeed: 3
   soundButton: {fileID: 2979192018214280119}
   vibButton: {fileID: 7625697810611709631}
   soundSpriteList:
@@ -694,7 +694,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a290fe3eb3bc26b4482dc55c3c0d120a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   rotationSpeed: 80
+  rotationSpeed2: 0
 --- !u!58 &220769244
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -885,7 +887,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a290fe3eb3bc26b4482dc55c3c0d120a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   rotationSpeed: 80
+  rotationSpeed2: 0
 --- !u!58 &272885026
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1078,7 +1082,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a290fe3eb3bc26b4482dc55c3c0d120a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   rotationSpeed: 80
+  rotationSpeed2: 0
 --- !u!58 &367284148
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2261,7 +2267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a290fe3eb3bc26b4482dc55c3c0d120a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   rotationSpeed: 120
+  rotationSpeed2: 0
 --- !u!58 &973536276
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2883,7 +2891,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a290fe3eb3bc26b4482dc55c3c0d120a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   rotationSpeed: 80
+  rotationSpeed2: 0
 --- !u!58 &1499757521
 CircleCollider2D:
   m_ObjectHideFlags: 0
