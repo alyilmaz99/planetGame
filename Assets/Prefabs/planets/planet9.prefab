@@ -135,5 +135,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  rotationSpeed: 80
-  rotationSpeed2: 100
+  rotationSpeed: 150
+  rotationSpeed2: 170
