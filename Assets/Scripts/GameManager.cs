@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject scoreGameObject;
 
+    [SerializeField] private TextMeshProUGUI score;
+
 
 
 
@@ -30,7 +33,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         EndScreen();
-       
+        score.text= PlayerPrefs.GetInt("score").ToString();
+
+
     }
 
     public void EndScreen()
