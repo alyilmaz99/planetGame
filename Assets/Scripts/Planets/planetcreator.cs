@@ -47,9 +47,9 @@ public class planetcreator : MonoBehaviour
     {
         scoretext[0].text = PlayerPrefs.GetInt("score").ToString();
         scoretext[1].text = PlayerPrefs.GetInt("score").ToString();
-        if(Time.time > firetimer && fireb == 1){
-            firecreate();
-        }
+         if(Time.time > firetimer && fireb == 1){
+              firecreate();
+          }
     }
     public void planetcreate(Vector3 position){
         ps = position;
