@@ -190,7 +190,7 @@ public class PlayerControl : MonoBehaviour
             Sound();
             Vibration();
             //transform.parent = null;
-            //flyCheck = true;
+            flyCheck = true;
         }
         for (int i = 0; i < Input.touchCount; ++i)
         {
