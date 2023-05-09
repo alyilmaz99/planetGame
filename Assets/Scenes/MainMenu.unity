@@ -1031,11 +1031,7 @@ MonoBehaviour:
   marketScreen: {fileID: 986973150}
   soundPrefBool: 0
   vibrationPrefBool: 0
-  soundButton: {fileID: 4230579135699344761}
-  noSound: {fileID: 21300000, guid: 911b8fb7cd61ebe479762eba2edfdbd1, type: 3}
   withSound: {fileID: 21300000, guid: d7c6bb74a1193474090d06397e79485a, type: 3}
-  vibButton: {fileID: 6374599254383205056}
-  noVib: {fileID: 21300000, guid: 0e4b8980f9a21084e9430f70f28de7cd, type: 3}
   withVib: {fileID: 21300000, guid: 76b4017952385ef48b674cb6ace7be62, type: 3}
   sound: 0
   vib: 0
@@ -1043,6 +1039,16 @@ MonoBehaviour:
   noAdsButton2: {fileID: 1465690124}
   adsCheck: 0
   adsReset: 0
+  soundButton: {fileID: 1422355900}
+  vibButton: {fileID: 789668249}
+  soundSpriteList:
+  - {fileID: 21300000, guid: 03590fd18c7e46a4780fcd7dee075121, type: 3}
+  - {fileID: 21300000, guid: bb1fd07154e710743b07b916489fc1b5, type: 3}
+  vibSpriteList:
+  - {fileID: 21300000, guid: a5f5cc1f546331440a647447efe272b4, type: 3}
+  - {fileID: 21300000, guid: 067598adf0eed5c4fb475736651be356, type: 3}
+  soundFixer: 1
+  vibFixer: 1
 --- !u!114 &429930934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2866,6 +2872,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -200}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &789668249 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8374813600798732152, guid: 1d4d154d1101a4949a0a7a7bbfa9310f, type: 3}
+  m_PrefabInstance: {fileID: 1177101969813495155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &793693645
 GameObject:
   m_ObjectHideFlags: 0
@@ -4804,6 +4815,11 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5722276884901106926, guid: 678cbdf582aa9124ba5938074dbe3e91, type: 3}
   m_PrefabInstance: {fileID: 552617942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1422355900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3797251382505673328, guid: 1d4d154d1101a4949a0a7a7bbfa9310f, type: 3}
+  m_PrefabInstance: {fileID: 1177101969813495155}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1436869241
 GameObject:
@@ -7271,34 +7287,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SETTINGSCREEN
       objectReference: {fileID: 0}
-    - target: {fileID: 7548458246519800071, guid: 1d4d154d1101a4949a0a7a7bbfa9310f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d4d154d1101a4949a0a7a7bbfa9310f, type: 3}
---- !u!114 &4230579135699344761 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3090561496421007370, guid: 1d4d154d1101a4949a0a7a7bbfa9310f, type: 3}
-  m_PrefabInstance: {fileID: 1177101969813495155}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6374599254383205056 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5197937089254934451, guid: 1d4d154d1101a4949a0a7a7bbfa9310f, type: 3}
-  m_PrefabInstance: {fileID: 1177101969813495155}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8688686994345892980 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7548458246519800071, guid: 1d4d154d1101a4949a0a7a7bbfa9310f, type: 3}

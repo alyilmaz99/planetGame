@@ -22,6 +22,10 @@ public class GameSceneSettings : MonoBehaviour
     [SerializeField] private List<Sprite> soundSpriteList = new List<Sprite>();
     [SerializeField] private List<Sprite> vibSpriteList = new List<Sprite>();
 
+
+
+
+
     [SerializeField] private bool soundFixer;
     [SerializeField] private bool vibFixer;
     #endregion
@@ -80,7 +84,7 @@ public class GameSceneSettings : MonoBehaviour
     }
 
 
-    void SoundVibUpdate()
+   public void SoundVibUpdate()
     {
         if (soundFixer)
         {
@@ -107,7 +111,7 @@ public class GameSceneSettings : MonoBehaviour
     }
 
 
-    void StartSoundVibCheck()
+    public  void StartSoundVibCheck()
     {
         if (PlayerPrefs.GetInt("sound") == 1)
         {
