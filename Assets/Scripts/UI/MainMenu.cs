@@ -10,7 +10,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject settingsScreen;
     [SerializeField] private GameObject leaderBoardScreen;
+
+
+
     [SerializeField] private GameObject marketScreen;
+    [SerializeField] private Button market;
 
     [SerializeField] private bool soundPrefBool;
     [SerializeField] private bool vibrationPrefBool;
@@ -81,11 +85,13 @@ public class MainMenu : MonoBehaviour
     {
         mainMenu.SetActive(false);
         marketScreen.SetActive(true);
+        market.gameObject.SetActive(false); 
     }
     public void BackButtonMarket()
     {
         mainMenu.SetActive(true);
         marketScreen.SetActive(false);
+        market.gameObject.SetActive(true);
     }
 
     public void BackButtonSettings()

@@ -4,25 +4,17 @@ using UnityEngine;
 
 public class Walls : MonoBehaviour
 {
-    
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
 
     public void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "Player")
         {
-            
-            var player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>();
-            player.endCheck = true;
+           var player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControl>();
+            if (player.flyCheck==true)
+            {
+                player.endCheck = true;
+            }
+        
         }
     }
 
