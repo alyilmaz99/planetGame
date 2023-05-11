@@ -7,7 +7,7 @@ using static UnityEngine.GraphicsBuffer;
 public class PlayerControl : MonoBehaviour
 {
 
-    [SerializeField] private bool flyCheck = false;
+    [SerializeField] public bool flyCheck = false;
 
     [SerializeField] private float forcePower, forcePower2;
     [SerializeField] private Vector2 rotationVector2 = new Vector2(0, 1);
